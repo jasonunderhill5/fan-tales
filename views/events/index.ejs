@@ -12,7 +12,11 @@
   <p><%= event.venue %></p>
   <p><%= event.location %></p>
   <p><%= event.content %></p>
-  <button>Delete 🚮</button>
+  <% if (event.author._id.equals(user.profile._id)) { %>
+    <form action="/events/<%= post._id %>?_method=DELETE" method="POST"> 
+    <button>Delete 🚮</button>
+    </form>
+    <% } %>
  </div>
 <% }) %>
 </div>

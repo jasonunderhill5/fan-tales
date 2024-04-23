@@ -33,9 +33,17 @@ function index(req, res) {
   })
   }
 
+  function deleteEvent(req, res) {
+    Event.findByIdAndDelete(req.params.eventId)
+    .then(event => {
+      res.redirect('/events')
+    })
+  }
+
 export {
   newEvent as new,
   create,
-  index
+  index,
+  deleteEvent as delete
 
 }
