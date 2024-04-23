@@ -10,7 +10,7 @@ import { Event } from "../models/event.js"
     req.body.author = req.user.profile._id
     Event.create(req.body)
     .then(post => {
-      res.redirect('/post')
+      res.redirect('/events')
     })
     .catch(err => {
       console.log(err)
