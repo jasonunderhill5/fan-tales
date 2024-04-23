@@ -20,6 +20,7 @@ import { Event } from "../models/event.js"
 
 function index(req, res) {
   Event.find({})
+  .populate('author')
   .then(events => {
     res.render('events/index', {
       title: 'All Events',

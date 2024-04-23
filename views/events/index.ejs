@@ -8,7 +8,7 @@
   <div>
 <% events.forEach(event => { %>
  <div class="events-card">
-  <h2><%= event.title %></h2>
+  <h2><%= event.title %> - posted by <%= event.author.name %></h2>
   <p><%= event.venue %></p>
   <p><%= event.location %></p>
   <p><%= event.content %></p>
