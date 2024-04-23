@@ -18,8 +18,20 @@ import { Event } from "../models/event.js"
     })
   }
 
+function index(req, res) {
+  Event.find({})
+  .then(events => {
+    res.render('events/index')
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+  }
+
 export {
   newEvent as new,
-  create
+  create,
+  index
 
 }
