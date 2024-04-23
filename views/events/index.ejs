@@ -7,7 +7,7 @@
 <div class="events-container">
   <div>
 <% events.forEach(event => { %>
- <div class="events-card">
+  <div class="events-card">
   <h2><%= event.title %> - posted by <%= event.author.name %></h2>
   <p><%= event.venue %></p>
   <p><%= event.location %></p>
@@ -17,7 +17,8 @@
     <button>Delete 🚮</button>
     </form>
     <% } %>
- </div>
+    <button>See Post</button>
+  </div>
 <% }) %>
 </div>
 
