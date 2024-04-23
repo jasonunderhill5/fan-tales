@@ -21,7 +21,9 @@ import { Event } from "../models/event.js"
 function index(req, res) {
   Event.find({})
   .then(events => {
-    res.render('events/index')
+    res.render('events/index', {
+      title: 'All Events'
+    })
   })
   .catch(err => {
     console.log(err)
