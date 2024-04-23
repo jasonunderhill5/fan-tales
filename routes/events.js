@@ -4,7 +4,7 @@ import * as eventsCtrl from '../controllers/events.js'
 
 const router = Router()
 
-router.get('/new', eventsCtrl.new)
+router.get('/new', isLoggedIn, eventsCtrl.new)
 
 
 
