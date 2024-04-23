@@ -4,7 +4,17 @@
 
 
 <h1><%= title %></h1>
-
+<div class="events-container">
+  <div>
+<% events.forEach(event => { %>
+ <div class="events-card">
+  <h2><%= event.title %></h2>
+  <p><%= event.venue %></p>
+  <p><%= event.location %></p>
+  <p><%= event.content %></p>
+ </div>
+<% }) %>
+</div>
 
 
 

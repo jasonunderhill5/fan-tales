@@ -22,7 +22,8 @@ function index(req, res) {
   Event.find({})
   .then(events => {
     res.render('events/index', {
-      title: 'All Events'
+      title: 'All Events',
+      events: events
     })
   })
   .catch(err => {
