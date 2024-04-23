@@ -13,6 +13,7 @@ const eventSchema = new Schema({
   event: String,
   venue: String,
   location: String,
+  content: String,
   author: {type: Schema.types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
