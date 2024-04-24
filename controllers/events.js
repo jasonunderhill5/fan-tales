@@ -33,6 +33,16 @@ function index(req, res) {
   })
   }
 
+  function edit(req, res) {
+    Event.findById(req.params.eventId)
+    .then(event => {
+      res.render('events/edit', {
+        event,
+        title: "Edit Event"
+      })
+    })
+  }
+
   function deleteEvent(req, res) {
     Event.findByIdAndDelete(req.params.eventId)
     .then(event => {
