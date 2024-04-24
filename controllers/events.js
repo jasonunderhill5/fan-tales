@@ -41,6 +41,10 @@ function index(req, res) {
         title: "Edit Event"
       })
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/events')
+    })
   }
 
   function deleteEvent(req, res) {
@@ -54,6 +58,7 @@ export {
   newEvent as new,
   create,
   index,
-  deleteEvent as delete
+  edit,
+  deleteEvent as delete,
 
 }
