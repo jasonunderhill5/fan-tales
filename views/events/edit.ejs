@@ -1,0 +1,21 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/events/new.css">
+<%- include('../partials/nav') %>
+
+
+<h1><%= title %></h1>
+<form action="/events" method="POST">
+  <label for="title-input">Event:</label>
+  <input type="text" name="title">
+  <label for="venue-input">Venue:</label>
+  <input type="text" name="venue">
+  <label for="location-input">Location:</label>
+  <input type="text" name="location">
+  <textarea name="content"></textarea>
+  <button type="submit">🏟Post Event🎸</button>
+
+</form>
+
+
+
+<%- include('../partials/footer') %>
