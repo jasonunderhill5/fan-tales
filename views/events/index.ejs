@@ -13,11 +13,14 @@
   <p><%= event.location %></p>
   <p><%= event.content %></p>
   <% if (event.author._id.equals(user.profile._id)) { %>
+    <a href="/events/<%= event._id %>/edit">
+      <button class="btn">Edit this Event</button>
     <form action="/events/<%= post._id %>?_method=DELETE" method="POST"> 
     <button>Delete 🚮</button>
     </form>
+    </a>
     <% } %>
-    <button>See Post</button>
+    <button class="details-button">See Post</button>
   </div>
 <% }) %>
 </div>
