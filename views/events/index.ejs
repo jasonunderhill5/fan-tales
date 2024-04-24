@@ -15,7 +15,7 @@
   <% if (event.author._id.equals(user.profile._id)) { %>
     <a href="/events/<%= event._id %>/edit">
       <button class="btn">Edit this Event</button>
-    <form action="/events/<%= post._id %>?_method=DELETE" method="POST"> 
+    <form action="/events/<%= event._id %>?_method=DELETE" method="POST"> 
     <button>Delete 🚮</button>
     </form>
     </a>
