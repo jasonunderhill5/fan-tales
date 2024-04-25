@@ -52,13 +52,27 @@ function index(req, res) {
     .then(event => {
       res.redirect('/events')
     })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/events')
+    })
   }
-
+  function show(req, res) {
+    Event.findById(req.params.eventId)
+    .populate('author')
+    .then(event => {
+      res.render('events/show', {
+        title: 'Event Details',
+        event
+      })
+    })
+  }
 export {
   newEvent as new,
   create,
   index,
   edit,
   deleteEvent as delete,
+  show
 
 }
